@@ -30,23 +30,16 @@ Example: database server that listens for and processes numerous client requests
 An instruction trace can be defined as the continuous recorded data which is related to the CPU instruction execution, having the OS code and the context switches.
 ##2.What common events lead to the creation of a process?
 Four common events lead to the process creation. They are as follows:
-1.New batch Job: 
-	the OS is provided with a batch job control stream.
-2.Interactive log-on:
-	a user at a terminal logs on to the system
+1.New batch Job: the OS is provided with a batch job control stream.
+2.Interactive log-on:a user at a terminal logs on to the system
 3.created by the OS to provide a service
 4.spawned by existing process
 
 ##3.What does it mean to preempt a process?
-    To preempt a process means to reclaim a resources(processor) from a process before 
-    the process has finished using it. 
-    The process is executing and could continue to execute, but is preempted 
-    so that another process can be executed.
+To preempt a process means to reclaim a resources(processor) from a process before the process has finished using it.The process is executing and could continue to execute, but is preempted so that another process can be executed.
     
 ##4.What is swapping and what is its purpose?
-    Swapping involves moving part or all of a process from main memory to disk. 
-    Its purpose is to maximize the number of processes in the system, we swap a process
-    from the ready state to the ready suspend state.
+Swapping involves moving part or all of a process from main memory to disk.Its purpose is to maximize the number of processes in the system, we swap a process from the ready state to the ready suspend state.
     
 ##5.Why does Figure 3.9b have two blocked states?
 If a process in the running state requires more memory, then at least one blocked process can be swapped out of memory onto disk. 
@@ -61,10 +54,10 @@ if we require more space for bring in more blocked processes and later they can 
   to be executed immediately. 
   3. The process was placed in a suspended state by an agent: either itself, a parent process, or the OS,
   for the purpose of preventing its execution.   
-4.The process may not be removed from this state until the agent explicitly orders the removal.  
+  4.The process may not be removed from this state until the agent explicitly orders the removal.  
 
 ##7.List three general categories of information in a process control block.
-	Process identification: id of this process, id of the parent process and user id. \\
+	Process identification: id of this process, id of the parent process and user id. 
 	Processor state information: program counter, status registers, and general-purpose registers. 
 	Process control information: 
     a. Scheduling & state information: process state, priority, scheduling-related information 
@@ -77,12 +70,8 @@ if we require more space for bring in more blocked processes and later they can 
     f. Interprocess communication
 
 ##8.Why are two modes (user and kernel) needed?
-	Processes in kernel mode can access both: kernel and user addresses.
-	Processes in user mode can access their own instructions and data but not kernel instructions
-	and data (or those of other processes).
-User mode avoids direct access to the hardware and ensures isolated execution of each process, 
-a system call from the user program leads to a switch to kernel mode. Various privileged instructions
-can be run only when in kernel mode. So we require two modes.
+Processes in kernel mode can access both: kernel and user addresses.Processes in user mode can access their own instructions and data but not kernel instructions and data (or those of other processes).
+User mode avoids direct access to the hardware and ensures isolated execution of each process, a system call from the user program leads to a switch to kernel mode. Various privileged instructions can be run only when in kernel mode. So we require two modes.
 
 ##9.What is the difference between an interrupt and a trap?
 A trap is an exception in a user process. It's caused by division by zero or invalid memory access.
@@ -95,9 +84,9 @@ since the interrupt handler has to wait for them to happen eventually.
 ##10.Give three examples of an interrupt
 Generally there are three types of Interrupts 
 
-1) clock Interrupt
-2) I/O Interrupt.
-3) memory fault.
+1. clock Interrupt
+2. I/O Interrupt.
+3. memory fault.
 
 ##11.What is the difference between a mode switch and a process switch?
   process switch may occur any time that the OS has gained control from the currently running process where as a mode switch may occur without changing the state of the process that is currently in the Running state.
