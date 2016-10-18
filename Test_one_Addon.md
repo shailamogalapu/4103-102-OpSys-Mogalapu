@@ -30,6 +30,7 @@ Example: database server that listens for and processes numerous client requests
 An instruction trace can be defined as the continuous recorded data which is related to the CPU instruction execution, having the OS code and the context switches.
 ##2.What common events lead to the creation of a process?
 Four common events lead to the process creation. They are as follows:
+
 	1. New batch Job: the OS is provided with a batch job control stream.
 	2. Interactive log-on:a user at a terminal logs on to the system
 	3. created by the OS to provide a service
