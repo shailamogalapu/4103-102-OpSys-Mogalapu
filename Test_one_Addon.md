@@ -30,10 +30,10 @@ Example: database server that listens for and processes numerous client requests
 An instruction trace can be defined as the continuous recorded data which is related to the CPU instruction execution, having the OS code and the context switches.
 ##2.What common events lead to the creation of a process?
 Four common events lead to the process creation. They are as follows:
-1.New batch Job: the OS is provided with a batch job control stream.
-2.Interactive log-on:a user at a terminal logs on to the system
-3.created by the OS to provide a service
-4.spawned by existing process
+	1.New batch Job: the OS is provided with a batch job control stream.
+	2.Interactive log-on:a user at a terminal logs on to the system
+	3.created by the OS to provide a service
+	4.spawned by existing process
 
 ##3.What does it mean to preempt a process?
 To preempt a process means to reclaim a resources(processor) from a process before the process has finished using it.The process is executing and could continue to execute, but is preempted so that another process can be executed.
