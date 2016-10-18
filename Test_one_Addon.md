@@ -64,14 +64,16 @@ if we require more space for bring in more blocked processes and later they can 
 4.The process may not be removed from this state until the agent explicitly orders the removal.  
 
 ##7.List three general categories of information in a process control block.
-Process identification: id of this process, id of the parent process and user id. \\
-Processor state information: program counter, status registers, and general-purpose registers. 
+	Process identification: id of this process, id of the parent process and user id. \\
+	Processor state information: program counter, status registers, and general-purpose registers. 
 	Process control information: 
-    a. Scheduling & state information: process state, priority, scheduling-related information (amount of time waiting and time being executed), event (identity of event the process is awaiting before can be resumed) 
+    a. Scheduling & state information: process state, priority, scheduling-related information 
+    (amount of time waiting and time being executed), event (identity of event the process is awaiting before can be resumed) 
     b. Data structuring: a process may be linked to other process in a queue. 
     c. Memory management: include pointers to page tables that describe the virtual memory assigned
     d. Resource ownership and utilization
-    e. Process privileges: e.g. the memory that may be accessed, types of instructions that may be executed and the use of system     utilities and services 
+    e. Process privileges: e.g. the memory that may be accessed, types of instructions that may be executed and
+    the use of system utilities and services 
     f. Interprocess communication
 
 ##8.Why are two modes (user and kernel) needed?
