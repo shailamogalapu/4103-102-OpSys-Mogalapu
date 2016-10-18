@@ -1,4 +1,4 @@
-#Multi*
+##Multi*
 ##Define the following and give examples of each.
 ###1.MULTI-TASKING:
 A mode of operation that provides for the concurrent performance or interleaved execution of two or more computer tasks.
@@ -38,46 +38,64 @@ Four common events lead to the process creation. They are as follows:
 4.spawned by existing process
 
 ##3.What does it mean to preempt a process?
-    To preempt a process means to reclaim a resources(processor) from a process before the process has finished using it. 
-    The process is executing and could continue to execute, but is preempted so that another process can be executed.
+    To preempt a process means to reclaim a resources(processor) from a process before 
+    the process has finished using it. 
+    The process is executing and could continue to execute, but is preempted 
+    so that another process can be executed.
     
 ##4.What is swapping and what is its purpose?
-    Swapping involves moving part or all of a process from main memory to disk. Its purpose is to maximize the number of processes in the system, we swap a process from the ready state to the ready suspend state.
+    Swapping involves moving part or all of a process from main memory to disk. 
+    Its purpose is to maximize the number of processes in the system, we swap a process
+    from the ready state to the ready suspend state.
     
 ##5.Why does Figure 3.9b have two blocked states?
-If a process in the running state requires more memory, then at least one blocked process can be swapped out of memory onto disk. The transition can also be made for the blocked process if there are ready processes available, and the OS determines that the ready process requires more main memory to maintain adequate performance.
-A blocked process that is suspended becomes blocked suspend. To obtain more memory we have two blocked states so that memory can be obtained by using secondary memory like disks. When the process is in blocked state we can simply place that onto the disk if we require more space for bring in more blocked processes and later they can be brought back whenever possible.
+If a process in the running state requires more memory, then at least one blocked process can be swapped out of memory onto disk. 
+The transition can also be made for the blocked process if there are ready processes available, and the OS determines that the ready process requires more main memory to maintain adequate performance.
+A blocked process that is suspended becomes blocked suspend. To obtain more memory we have two blocked states so that memory can be obtained by using secondary memory like disks. When the process is in blocked state we can simply place that onto the disk
+if we require more space for bring in more blocked processes and later they can be brought back whenever possible.
 
 ##6.List four characteristics of a suspended process.
   1. The process is not immediately available for execution. 
-  2. The process may or may not be waiting on an event. If it is, this blocked condition is independent of the suspend condition, and occurrence of the blocking event does not enable the process to be executed immediately. 
-  3. The process was placed in a suspended state by an agent: either itself, a parent process, or the OS, for the purpose of preventing its execution.   
+  2. The process may or may not be waiting on an event. If it is, this blocked condition is
+  independent of the suspend condition, and occurrence of the blocking event does not enable the process
+  to be executed immediately. 
+  3. The process was placed in a suspended state by an agent: either itself, a parent process, or the OS,
+  for the purpose of preventing its execution.   
 4.The process may not be removed from this state until the agent explicitly orders the removal.  
 
 ##7.List three general categories of information in a process control block.
 	Process identification: id of this process, id of the parent process and user id. 
 	Processor state information: program counter, status registers, and general-purpose registers. 
 	Process control information: 
-		a. Scheduling & state information: process state, priority, scheduling-related information (amount of time waiting and time being executed), event (identity of event the process is awaiting before can be resumed) 
+		a. Scheduling & state information: process state, priority, scheduling-related 
+		information (amount of time waiting and time being executed), 
+		event (identity of event the process is awaiting before can be resumed) 
 		b. Data structuring: a process may be linked to other process in a queue. 
 		c. Memory management: include pointers to page tables that describe the virtual memory assigned
 		d. Resource ownership and utilization
- 		e. Process privileges: e.g. the memory that may be accessed, types of instructions that may be executed and the use of system utilities and services 
+ 		e. Process privileges: e.g. the memory that may be accessed, types of instructions that may be 
+		executed and the use of system utilities and services 
 		f. Interprocess communication
 
 ##8.Why are two modes (user and kernel) needed?
-	Processes in kernel mode can access both: kernel and user addresses. Processes in user mode can access their own instructions and data but not kernel instructions and data (or those of other processes).
-User mode avoids direct access to the hardware and ensures isolated execution of each process, a system call from the user program leads to a switch to kernel mode. Various privileged instructions can be run only when in kernel mode. So we require two modes.
+	Processes in kernel mode can access both: kernel and user addresses.
+	Processes in user mode can access their own instructions and data but not kernel instructions
+	and data (or those of other processes).
+User mode avoids direct access to the hardware and ensures isolated execution of each process, 
+a system call from the user program leads to a switch to kernel mode. Various privileged instructions
+can be run only when in kernel mode. So we require two modes.
 
 ##9.What is the difference between an interrupt and a trap?
-A trap is an exception in a user process. It's caused by division by zero or invalid memory access. It's also the usual way to invoke 
-a kernel routine (a system call) because those run with a higher priority than user code. Handling is synchronous. In a sense they
-are active most of the time, the code expects the trap to happen and relies on this fact.
-An interrupt is something generated by the hardware. These are asynchronous or passive since the interrupt handler has to wait for 
-them to happen eventually.
+A trap is an exception in a user process. It's caused by division by zero or invalid memory access.
+It's also the usual way to invoke a kernel routine (a system call) because those run with a higher 
+priority than user code. Handling is synchronous. In a sense they are active most of the time, 
+the code expects the trap to happen and relies on this fact.
+An interrupt is something generated by the hardware. These are asynchronous or passive 
+since the interrupt handler has to wait for them to happen eventually.
 
 ##10.Give three examples of an interrupt
 Generally there are three types of Interrupts 
++
 +1) clock Interrupt
 +2) I/O Interrupt.
 +3) memory fault.
